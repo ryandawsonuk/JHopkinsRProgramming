@@ -17,6 +17,7 @@ complete <- function(directory, id=1:332){
     
     #filter to complete cases
     completeCases <- frame[complete.cases(frame),]
+    
     #count them
     numcompletecases <- nrow(completeCases)
     #record the count as a new element in the vector
