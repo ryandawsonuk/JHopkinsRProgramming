@@ -10,6 +10,13 @@ rankhospital <- function(state, outcome, num="best") {
         stop("invalid outcome");
     }
     
+    #check the num parameter
+    if(match(x=tolower(num), table=c("best","worst"),nomatch = 0)==0){
+        if(is.na(as.numeric(num))){
+            stop("invalid num");
+        }
+    }
+    
     # If an invalid state value is passed to best,  the function should throw an error via the
     # stop function with the exact message "invalid state"
     validStates <- unique(data[,7]);
@@ -43,6 +50,7 @@ rankhospital <- function(state, outcome, num="best") {
     
     #If there is a tie for the best hospital for a given outcome, then the hospital names should
     #be sorted in alphabetical order and the first hospital in that set should be chosen
+    #so order by outcome and then hospital name
     outcomeData = outcomeData[order(outcomeData[,2], outcomeData[,1]),];
     
     if(num=="best"){
