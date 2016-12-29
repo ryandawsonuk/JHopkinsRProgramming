@@ -27,32 +27,36 @@ rankall <- function(outcome, num = "best") {
     #make outcome numeric
     data[, outcomeColMatch] = suppressWarnings( as.numeric(data[, outcomeColMatch]) );
     
+    # filter to just name, state, and death rate
+    data = data[, c(2, 7, outcomeColMatch)]  
+    
     # Remove rows with NA
-    data = data[!is.na(data[,outcomeColMatch]),]
+    data = na.omit(data);
+    
     
     ## For each state, find the hospital of the given rank
     ## Return a data frame with the hospital names and the
     ## (abbreviated) state name
     
-    #split data by state (which is 7th col)
-    splitdata = split(data, data[,7]);
+    #split data by state (which is now 2nd col)
+    splitdata = split(data, data[,2]);
     
     allranked = lapply(splitdata, function(outcomeData, num) {
 
         
         # order by outcome and then hospital name
-        outcomeData = outcomeData[order(outcomeData[,outcomeColMatch], outcomeData[,1]),];
+        outcomeData = outcomeData[order(outcomeData[,3], outcomeData[,1]),];
         
         
         #return row for appropriate ranked hospital
-        #col 2 is hosp name
+        #col 1 is hosp name
         if(num=="best"){
-            return (outcomeData[1,2]);
+            return (outcomeData[1,1]);
         }
         if(num=="worst"){
-            return (outcomeData[nrow((outcomeData)),2]);
+            return (outcomeData[nrow((outcomeData)),1]);
         }
-        return (outcomeData[num,2]);
+        return (outcomeData[num,1]);
     }, num);
 
     #data is now in a list of variables with name state and val hosp name
