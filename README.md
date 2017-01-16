@@ -14,7 +14,7 @@ Weeks 1 and 2 of the course are assessed interactively via Swirl and so there is
 
 ##Week 3 Assignment - Cacheable Mean on Vector
 
-The week 3 assignment is to implement a Vector datatype that can cache its own mean. It illustrates the use of the lexical assignment operator (<<-). It also illustrates functions being passed to other functions. Details in [/module3/README.me](/module3/README.me)
+The week 3 assignment is to implement a Vector datatype that can cache its own mean. It illustrates the use of the lexical assignment operator (<<-). It also illustrates functions being passed to other functions. Details in [/module3/README.md](/module3/README.md)
 
 ##Week 4 Assignment - Hospital Quality Comparisons
 
