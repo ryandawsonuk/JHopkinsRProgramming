@@ -24,6 +24,6 @@ The week 4 assignment requires doing some comparisons between hospital statistic
 
 Completed 29 December 2016 - [Official Certificate](https://www.coursera.org/account/accomplishments/certificate/DFFY4D5CN5GY)
 
-#Note to Coursera
+#Note to Coursera Community
 
-I am storing this in source control after completing the course for my own purposes. This is not intended for coursera students. If anyone from Coursera disapproves then I am happy to remove - if so please flag to me under the issues section.
+I am storing this in source control after completing the course for my own purposes. This is not intended for coursera students. If anyone from Coursera community is uncomfortable with this then I am happy to remove - if so please flag to me under the issues section.
