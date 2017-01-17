@@ -19,3 +19,11 @@ The week 3 assignment is to implement a Vector datatype that can cache its own m
 ##Week 4 Assignment - Hospital Quality Comparisons
 
 The week 4 assignment requires doing some comparisons between hospital statistics based upon a provided dataset. Details in [/module4/HospitalQualityAssignment.pdf/](/module4/HospitalQualityAssignment.pdf)
+
+##Certificate of Completion
+
+Completed 29 December 2016 - [Official Certificate](https://www.coursera.org/account/accomplishments/certificate/DFFY4D5CN5GY)
+
+#Note to Coursera
+
+I am storing this in source control after completing the course for my own purposes. This is not intended for coursera students. If anyone from Coursera disapproves then I am happy to remove - if so please flag to me under the issues section.
